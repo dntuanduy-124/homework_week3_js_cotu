@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        div {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script language="javascript">
+        function change_backgroud() {
+            var divs = document.getElementsByTagName("div");
+            for (var i = 0; i < divs.length; i++) {
+                // Vị trí chẵn => màu đỏ
+                if ((i + 1) % 2 == 0) {
+                    divs[i].style.background = "red";
+                }
+                else { // Vị trí lẽ => màu xanh
+                    divs[i].style.background = "blue";
+                }
+            }
+        }
+    </script>
+    <div>Thẻ thứ 1</div>
+    <div>Thẻ thứ 2</div>
+    <div>Thẻ thứ 3</div>
+    <div>Thẻ thứ 4</div>
+    <div>Thẻ thứ 5</div>
+    <div>Thẻ thứ 6</div>
+    <div>Thẻ thứ 7</div>
+    <div>Thẻ thứ 8</div>
+    <div>Thẻ thứ 9</div>
+    <div>Thẻ thứ 10</div>
+    <button onclick="change_backgroud()">Change background</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Giai phuong trinh bac nhat</title>
+</head>
+<body>
+    <h3>Giải phương trình: ax + b = 0</h3>
+    <p>
+        <input type="text" id="a" size="10"> x + <input type="text" id="b" size="10"> = 0
+    </p>
+    <p id="ketQua"></p>
+    <input type="button" onclick="GiaiPhuongTrinh()" value="Giải phương trình">
+    <script type="text/javascript">
+        function GiaiPhuongTrinh() {
+            var a = parseInt(document.getElementById('a').value);
+            var b = parseInt(document.getElementById('b').value);
+            if (a != 0) {
+                var x = -b / a;
+                document.getElementById('ketQua').innerText = "Phương trình có nghiệm x = " + x; //a!=0 
+            }
+            else if (b == 0) {
+                document.getElementById('ketQua').innerText = "Phương trình có vô số nghiệm."; //a=0 vs b=0
+            }
+            else {
+                document.getElementById('ketQua').innerText = "Phương trình vô nghiệm."; //a=0 vs b!=0
+            }
+        }
+    </script>
+</body>
+</html>
